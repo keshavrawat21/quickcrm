@@ -1,0 +1,2437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick CRM — AI-Powered Customer Management</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="images/favicon1.png" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- =================== NAVBAR =================== -->
+    <nav id="navbar">
+      <div class="navbar-inner">
+        <a href="#" class="nav-logo">
+          <!-- <div class="nav-logo-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L2 7L12 12L22 7L12 2Z"
+                fill="white"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M2 17L12 22L22 17"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-opacity="0.7"
+              />
+              <path
+                d="M2 12L12 17L22 12"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div> -->
+          <!-- Quick<span style="color: var(--primary)">CRM</span> -->
+
+          <img src="images/logo2.png" width="80px" alt="" />
+        </a>
+
+        <!-- Desktop links (hidden on mobile) -->
+        <ul class="nav-links mb-0" id="navLinks">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#partner-section">Become a Partner</a></li>
+          <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+        </ul>
+
+        <!-- Desktop right actions -->
+        <div class="nav-actions" id="navActions">
+          <a href="/admin/auth/login" class="nav-login">Login</a>
+          <a href="/admin/auth/login" class="nav-register">Register</a>
+          <a href="/admin/auth/login" class="nav-cta">Start 30 Days Free Trial</a>
+        </div>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== MOBILE DRAWER (separate from navbar) ===== -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-header">
+        <a href="#" class="nav-logo" style="color: var(--text-dark)">
+          <!-- <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2L2 7L12 12L22 7L12 2Z"
+                fill="white"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M2 17L12 22L22 17"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-opacity="0.7"
+              />
+              <path
+                d="M2 12L12 17L22 12"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div> -->
+          <!-- Quick<span style="color: var(--primary)">CRM</span> -->
+
+          <img src="images/logo2.png" width="80px" alt="" />
+        </a>
+        <button
+          class="mobile-drawer-close"
+          id="navClose"
+          aria-label="Close menu"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <nav class="mobile-drawer-nav">
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#how" class="mobile-nav-link">How It Works</a>
+        <a href="#pricing" class="mobile-nav-link">Pricing</a>
+        <a href="#partner-section" class="mobile-nav-link">Become a Partner</a>
+        <!-- <a href="#testimonials" class="mobile-nav-link">Testimonials</a> -->
+      </nav>
+      <div class="mobile-drawer-actions">
+        <a href="/admin/auth/login" class="mobile-drawer-btn-ghost">Login</a>
+        <a href="/admin/auth/login" class="mobile-drawer-btn-primary">Start 30 Days Free Trial</a>
+      </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- =================== HERO =================== -->
+    <section id="hero">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+
+      <div class="container-xl-custom">
+        <div class="row align-items-center gy-5">
+          <!-- LEFT -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
+            <div class="hero-eyebrow">
+              <span class="badge-pill">NEW</span>
+              AI-Powered CRM for Modern Sales Teams
+            </div>
+
+            <h1 class="hero-headline">
+              Smarter Customer Management with
+              <span class="text-gradient"> AI-Powered</span> CRM
+            </h1>
+
+            <p class="hero-desc">
+              Automate your pipeline, get real-time insights, and close deals
+              faster. Quick CRM uses AI to handle the heavy lifting — so your
+              team can focus on building relationships.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#" class="btn-primary-custom">
+                Start 30 Days Free Trial
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#" class="btn-ghost-custom">
+                <i class="bi bi-play-circle"></i>
+                Book a Free Demo
+              </a>
+            </div>
+
+            <div class="hero-social-proof">
+              <div class="proof-avatars">
+                <span>A</span>
+                <span>J</span>
+                <span>M</span>
+                <span>K</span>
+              </div>
+              <p class="proof-text mb-0">
+                <strong>4,200+ teams</strong> already growing with Quick CRM
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div
+            class="col-lg-6"
+            data-aos="fade-left"
+            data-aos-duration="700"
+            data-aos-delay="100"
+          >
+            <div class="hero-visual">
+              <!-- Floating badges -->
+              <div class="hero-float-badge badge-top-right">
+                <div
+                  class="badge-icon"
+                  style="background: rgba(74, 222, 128, 0.15)"
+                >
+                  ⏳
+                </div>
+                <div>
+                  <span style="font-size: 13px">30 Days Free Trial</span>
+                  <span
+                    class="badge-sub"
+                    style="color: #16a34a; font-weight: 700"
+                    >Unlock All Premium Features</span
+                  >
+                </div>
+              </div>
+
+              <div class="hero-float-badge badge-bottom-left">
+                <div
+                  class="badge-icon"
+                  style="background: rgba(79, 110, 247, 0.12)"
+                >
+                  🤖
+                </div>
+                <div>
+                  <span style="font-size: 13px">AI Suggestions</span>
+                  <span class="badge-sub">3 new leads scored</span>
+                </div>
+              </div>
+
+              <!-- Dashboard -->
+              <div class="hero-device-frame">
+                <div class="hero-device-topbar">
+                  <div class="topbar-dot red"></div>
+                  <div class="topbar-dot yellow"></div>
+                  <div class="topbar-dot green"></div>
+                </div>
+
+                <div class="hero-dashboard-mock">
+                  <!-- Header -->
+                  <div class="dash-header">
+                    <span class="dash-header-logo">QuickCRM Dashboard</span>
+                    <div class="dash-header-actions">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+
+                  <!-- Body -->
+                  <div class="dash-body">
+                    <div class="dash-sidebar">
+                      <div class="dash-sidebar-item active">
+                        <div class="icon-line"></div>
+                        <div class="text-line"></div>
+                      </div>
+                      <div class="dash-sidebar-item">
+                        <div class="icon-line"></div>
+                        <div class="text-line"></div>
+                      </div>
+                      <div class="dash-sidebar-item">
+                        <div class="icon-line"></div>
+                        <div class="text-line"></div>
+                      </div>
+                      <div class="dash-sidebar-item">
+                        <div class="icon-line"></div>
+                        <div class="text-line"></div>
+                      </div>
+                      <div class="dash-sidebar-item">
+                        <div class="icon-line"></div>
+                        <div class="text-line"></div>
+                      </div>
+                    </div>
+
+                    <div class="dash-main">
+                      <div class="dash-stat-row">
+                        <div class="dash-stat">
+                          <div class="stat-val">2,841</div>
+                          <div class="stat-label"></div>
+                          <div class="stat-bar"></div>
+                        </div>
+                        <div class="dash-stat">
+                          <div class="stat-val">₹92K</div>
+                          <div class="stat-label"></div>
+                          <div
+                            class="stat-bar"
+                            style="background: var(--gradient2); width: 75%"
+                          ></div>
+                        </div>
+                        <div class="dash-stat">
+                          <div class="stat-val">68%</div>
+                          <div class="stat-label"></div>
+                          <div
+                            class="stat-bar"
+                            style="
+                              background: linear-gradient(
+                                135deg,
+                                #10b981,
+                                #06b6d4
+                              );
+                              width: 68%;
+                            "
+                          ></div>
+                        </div>
+                        <div class="dash-stat">
+                          <div class="stat-val">142</div>
+                          <div class="stat-label"></div>
+                          <div
+                            class="stat-bar"
+                            style="
+                              background: linear-gradient(
+                                135deg,
+                                #f59e0b,
+                                #ef4444
+                              );
+                              width: 50%;
+                            "
+                          ></div>
+                        </div>
+                      </div>
+
+                      <div class="dash-chart-row">
+                        <div class="dash-chart">
+                          <div
+                            style="
+                              height: 6px;
+                              width: 70px;
+                              border-radius: 3px;
+                              background: #e2e8f0;
+                              margin-bottom: 10px;
+                            "
+                          ></div>
+                          <div class="chart-bars">
+                            <div class="chart-bar" style="height: 65%"></div>
+                            <div class="chart-bar" style="height: 55%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 45%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                            <div class="chart-bar" style="height: 65%"></div>
+                            <div class="chart-bar" style="height: 75%"></div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="dash-pipeline"
+                          style="
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            padding: 10px 12px;
+                          "
+                        >
+                          <div
+                            style="
+                              height: 6px;
+                              width: 60px;
+                              border-radius: 3px;
+                              background: #e2e8f0;
+                              margin-bottom: 2px;
+                            "
+                          ></div>
+                          <div class="pipe-item">
+                            <div
+                              class="pipe-dot"
+                              style="background: #4f6ef7"
+                            ></div>
+                            <div class="pipe-line">
+                              <div
+                                class="pipe-fill"
+                                style="width: 82%; background: #4f6ef7"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="pipe-item">
+                            <div
+                              class="pipe-dot"
+                              style="background: #06b6d4"
+                            ></div>
+                            <div class="pipe-line">
+                              <div
+                                class="pipe-fill"
+                                style="width: 60%; background: #06b6d4"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="pipe-item">
+                            <div
+                              class="pipe-dot"
+                              style="background: #10b981"
+                            ></div>
+                            <div class="pipe-line">
+                              <div
+                                class="pipe-fill"
+                                style="width: 45%; background: #10b981"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="pipe-item">
+                            <div
+                              class="pipe-dot"
+                              style="background: #f59e0b"
+                            ></div>
+                            <div class="pipe-line">
+                              <div
+                                class="pipe-fill"
+                                style="width: 28%; background: #f59e0b"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== LOGOS =================== -->
+    <section id="logos">
+      <div class="container-xl-custom">
+        <p class="logos-label">Trusted by teams at</p>
+        <div class="logos-row">
+          <span class="logo-item">Salesforce</span>
+          <span class="logo-item">HubSpot</span>
+          <span class="logo-item">Notion</span>
+          <span class="logo-item">Stripe</span>
+          <span class="logo-item">Linear</span>
+          <span class="logo-item">Vercel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== STATS BAND =================== -->
+    <!-- <div class="stats-band">
+      <div class="container-xl-custom">
+        <div class="stats-band-inner">
+          <div class="stat-item" data-aos="fade-up">
+            <div class="stat-num">50<span>+</span></div>
+            <div class="stat-desc">Active Teams</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="stat-num">₹500<span>K</span></div>
+            <div class="stat-desc">Revenue Tracked</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+            <div class="stat-num">98<span>%</span></div>
+            <div class="stat-desc">Customer Retention</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+            <div class="stat-num">3.2<span>×</span></div>
+            <div class="stat-desc">Faster Deal Closing</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- =================== FEATURES =================== -->
+    <section id="features" class="section-pad">
+      <div class="container-xl-custom">
+        <div
+          class="row justify-content-between align-items-end"
+          data-aos="fade-up"
+        >
+          <div class="col-lg-6">
+            <div class="label-tag"><span class="dot"></span> Features</div>
+            <h2 class="section-headline">
+              Powerful features built for modern sales teams
+            </h2>
+          </div>
+          <div class="col-lg-5">
+            <p class="section-sub" style="margin-bottom: 0">
+              Everything your team needs to capture, nurture, and close more
+              deals — in one intelligent platform.
+            </p>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-img-wrap">
+              <div class="feat-illustration">
+                <!-- <div class="fi-box">
+                  <div class="fi-row">
+                    <div class="fi-avatar"></div>
+                    <div class="fi-lines">
+                      <div class="fi-line w80 primary"></div>
+                      <div class="fi-line w60"></div>
+                    </div>
+                    <div class="fi-badge blue">Hot 🔥</div>
+                  </div>
+                  <div class="fi-row">
+                    <div class="fi-avatar teal"></div>
+                    <div class="fi-lines">
+                      <div class="fi-line w60 primary"></div>
+                      <div class="fi-line w45"></div>
+                    </div>
+                    <div class="fi-badge green">89%</div>
+                  </div>
+                  <div class="fi-row">
+                    <div class="fi-avatar amber"></div>
+                    <div class="fi-lines">
+                      <div class="fi-line w80"></div>
+                      <div class="fi-line w60"></div>
+                    </div>
+                    <div class="fi-badge orange">Warm</div>
+                  </div>
+                </div> -->
+                <img
+                  src="https://img.freepik.com/premium-vector/crm-with-aigenerated-insights-abstract-concept-vector-illustration_107173-75291.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="feature-number">01</div>
+              <h3 class="feature-title">AI Lead Management</h3>
+              <p class="feature-desc">
+                Automatically score and prioritize leads based on behavior,
+                demographics, and engagement signals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="feature-img-wrap">
+              <div class="feat-illustration">
+                <!-- <div class="fi-box">
+                  <div
+                    style="
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: #64748b;
+                      letter-spacing: 0.06em;
+                      text-transform: uppercase;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Pipeline Stages
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 7px">
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 8px;
+                          height: 8px;
+                          border-radius: 50%;
+                          background: #4f6ef7;
+                          flex-shrink: 0;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: #e2e8f0;
+                          overflow: hidden;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 88%;
+                            height: 100%;
+                            background: #4f6ef7;
+                            border-radius: 3px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #4f6ef7;
+                        "
+                        >88%</span
+                      >
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 8px;
+                          height: 8px;
+                          border-radius: 50%;
+                          background: #06b6d4;
+                          flex-shrink: 0;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: #e2e8f0;
+                          overflow: hidden;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 62%;
+                            height: 100%;
+                            background: #06b6d4;
+                            border-radius: 3px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #06b6d4;
+                        "
+                        >62%</span
+                      >
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 8px;
+                          height: 8px;
+                          border-radius: 50%;
+                          background: #10b981;
+                          flex-shrink: 0;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: #e2e8f0;
+                          overflow: hidden;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 41%;
+                            height: 100%;
+                            background: #10b981;
+                            border-radius: 3px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #10b981;
+                        "
+                        >41%</span
+                      >
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 8px;
+                          height: 8px;
+                          border-radius: 50%;
+                          background: #f59e0b;
+                          flex-shrink: 0;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: #e2e8f0;
+                          overflow: hidden;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 24%;
+                            height: 100%;
+                            background: #f59e0b;
+                            border-radius: 3px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #f59e0b;
+                        "
+                        >24%</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 12px;
+                      padding: 8px 10px;
+                      background: rgba(79, 110, 247, 0.08);
+                      border-radius: 8px;
+                      font-size: 12px;
+                      font-weight: 600;
+                      color: #4f6ef7;
+                    "
+                  >
+                    ₹142K pipeline value
+                  </div>
+                </div> -->
+                <img
+                  src="https://img.freepik.com/free-vector/data-analyst-consolidating-financial-information-reports-computer-financial-data-management-financial-software-digital-data-report-concept-bright-vibrant-violet-isolated-illustration_335657-456.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="feature-number">02</div>
+              <h3 class="feature-title">Smart Sales Pipeline</h3>
+              <p class="feature-desc">
+                Visualize your entire sales process and identify bottlenecks
+                with AI-powered stage analysis.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="feature-img-wrap">
+              <div class="feat-illustration">
+                <!-- <div class="fi-box">
+                  <div
+                    style="
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: #64748b;
+                      letter-spacing: 0.06em;
+                      text-transform: uppercase;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Automation Queue
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 8px">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 8px 10px;
+                        background: #f0fdf4;
+                        border-radius: 8px;
+                      "
+                    >
+                      <span style="font-size: 14px">✉️</span>
+                      <div style="flex: 1">
+                        <div
+                          style="
+                            height: 6px;
+                            width: 90%;
+                            border-radius: 3px;
+                            background: #bbf7d0;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            height: 5px;
+                            width: 60%;
+                            border-radius: 3px;
+                            background: #d1fae5;
+                            margin-top: 4px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #16a34a;
+                        "
+                        >Sent</span
+                      >
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 8px 10px;
+                        background: #eff6ff;
+                        border-radius: 8px;
+                      "
+                    >
+                      <span style="font-size: 14px">📅</span>
+                      <div style="flex: 1">
+                        <div
+                          style="
+                            height: 6px;
+                            width: 75%;
+                            border-radius: 3px;
+                            background: #bfdbfe;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            height: 5px;
+                            width: 50%;
+                            border-radius: 3px;
+                            background: #dbeafe;
+                            margin-top: 4px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #2563eb;
+                        "
+                        >2 min</span
+                      >
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 8px 10px;
+                        background: #fff7ed;
+                        border-radius: 8px;
+                      "
+                    >
+                      <span style="font-size: 14px">💬</span>
+                      <div style="flex: 1">
+                        <div
+                          style="
+                            height: 6px;
+                            width: 80%;
+                            border-radius: 3px;
+                            background: #fed7aa;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            height: 5px;
+                            width: 55%;
+                            border-radius: 3px;
+                            background: #ffedd5;
+                            margin-top: 4px;
+                          "
+                        ></div>
+                      </div>
+                      <span
+                        style="
+                          font-size: 10px;
+                          font-weight: 700;
+                          color: #ea580c;
+                        "
+                        >Queue</span
+                      >
+                    </div>
+                  </div>
+                </div> -->
+                <img
+                  src="https://img.freepik.com/premium-vector/data-extraction-concept-illustration_114360-4766.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="feature-number">03</div>
+              <h3 class="feature-title">Automated Follow-ups</h3>
+              <p class="feature-desc">
+                Never miss a touchpoint. Schedule and personalize follow-up
+                sequences that feel human, at scale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-img-wrap">
+              <div class="feat-illustration">
+                <!-- <div class="fi-box">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 11px;
+                        font-weight: 700;
+                        color: #64748b;
+                        letter-spacing: 0.06em;
+                        text-transform: uppercase;
+                      "
+                    >
+                      Insights
+                    </div>
+                    <div
+                      style="font-size: 11px; font-weight: 700; color: #f59e0b"
+                    >
+                      This Week ▾
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: flex-end;
+                      gap: 5px;
+                      height: 60px;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        flex: 1;
+                        border-radius: 4px 4px 0 0;
+                        background: rgba(249, 115, 22, 0.2);
+                        height: 45%;
+                        position: relative;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          right: 0;
+                          height: 45%;
+                          background: linear-gradient(135deg, #f59e0b, #f97316);
+                          border-radius: 4px 4px 0 0;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        flex: 1;
+                        border-radius: 4px 4px 0 0;
+                        background: rgba(249, 115, 22, 0.2);
+                        height: 70%;
+                        position: relative;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          right: 0;
+                          height: 70%;
+                          background: linear-gradient(135deg, #f59e0b, #f97316);
+                          border-radius: 4px 4px 0 0;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        flex: 1;
+                        border-radius: 4px 4px 0 0;
+                        background: rgba(249, 115, 22, 0.2);
+                        height: 55%;
+                        position: relative;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          right: 0;
+                          height: 55%;
+                          background: linear-gradient(135deg, #f59e0b, #f97316);
+                          border-radius: 4px 4px 0 0;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        flex: 1;
+                        border-radius: 4px 4px 0 0;
+                        background: rgba(249, 115, 22, 0.2);
+                        height: 90%;
+                        position: relative;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          right: 0;
+                          height: 90%;
+                          background: linear-gradient(135deg, #f59e0b, #f97316);
+                          border-radius: 4px 4px 0 0;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        flex: 1;
+                        border-radius: 4px 4px 0 0;
+                        background: rgba(249, 115, 22, 0.2);
+                        height: 60%;
+                        position: relative;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          right: 0;
+                          height: 60%;
+                          background: linear-gradient(135deg, #f59e0b, #f97316);
+                          border-radius: 4px 4px 0 0;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 8px">
+                    <div
+                      style="
+                        flex: 1;
+                        padding: 8px;
+                        background: #fff7ed;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      <div
+                        style="
+                          font-size: 16px;
+                          font-weight: 800;
+                          color: #ea580c;
+                          font-family: &quot;Sora&quot;, sans-serif;
+                        "
+                      >
+                        ₹41K
+                      </div>
+                      <div
+                        style="
+                          height: 5px;
+                          width: 65%;
+                          border-radius: 3px;
+                          background: #fed7aa;
+                          margin: 4px auto 0;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        flex: 1;
+                        padding: 8px;
+                        background: #fff7ed;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      <div
+                        style="
+                          font-size: 16px;
+                          font-weight: 800;
+                          color: #ea580c;
+                          font-family: &quot;Sora&quot;, sans-serif;
+                        "
+                      >
+                        74%
+                      </div>
+                      <div
+                        style="
+                          height: 5px;
+                          width: 65%;
+                          border-radius: 3px;
+                          background: #fed7aa;
+                          margin: 4px auto 0;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <img
+                  src="https://img.freepik.com/premium-vector/business-growth-insights-with-realtime-analytics_1343342-871.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="feature-number">04</div>
+              <h3 class="feature-title">Customer Insights Dashboard</h3>
+              <p class="feature-desc">
+                Deep-dive into customer behavior, lifecycle stages, and
+                engagement patterns with visual dashboards.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="feature-img-wrap">
+              <div class="feat-illustration">
+                <!-- <div class="fi-box">
+                  <div
+                    style="
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: #64748b;
+                      letter-spacing: 0.06em;
+                      text-transform: uppercase;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Task Automation
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 7px">
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 16px;
+                          height: 16px;
+                          border-radius: 5px;
+                          background: rgba(168, 85, 247, 0.15);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          font-size: 9px;
+                          color: #a855f7;
+                        "
+                      >
+                        ✓
+                      </div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: #e2e8f0;
+                          width: 85%;
+                        "
+                      ></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 16px;
+                          height: 16px;
+                          border-radius: 5px;
+                          background: rgba(168, 85, 247, 0.15);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          font-size: 9px;
+                          color: #a855f7;
+                        "
+                      >
+                        ✓
+                      </div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: #e2e8f0;
+                          width: 70%;
+                        "
+                      ></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 16px;
+                          height: 16px;
+                          border-radius: 5px;
+                          border: 1.5px solid #e2e8f0;
+                          flex-shrink: 0;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: rgba(168, 85, 247, 0.2);
+                          width: 75%;
+                        "
+                      ></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px">
+                      <div
+                        style="
+                          width: 16px;
+                          height: 16px;
+                          border-radius: 5px;
+                          border: 1.5px solid #e2e8f0;
+                          flex-shrink: 0;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          flex: 1;
+                          height: 6px;
+                          border-radius: 3px;
+                          background: rgba(168, 85, 247, 0.15);
+                          width: 60%;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 12px;
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      padding: 8px 10px;
+                      background: rgba(168, 85, 247, 0.08);
+                      border-radius: 8px;
+                    "
+                  >
+                    <span style="font-size: 14px">⚡</span>
+                    <span
+                      style="font-size: 12px; font-weight: 600; color: #7c3aed"
+                      >6 tasks automated today</span
+                    >
+                  </div>
+                </div> -->
+
+                <img
+                  src="https://img.freepik.com/premium-vector/person-interacts-with-visual-workflow-showing-customizable-task-steps-progress-indicators-data-steps-customizable-semi-flat-illustration_538213-149205.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="feature-number">05</div>
+              <h3 class="feature-title">Task Automation</h3>
+              <p class="feature-desc">
+                Eliminate repetitive work with smart automation rules that
+                trigger based on customer actions and CRM events.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="feature-img-wrap">
+              <div class="feat-illustration">
+                <!-- <div class="fi-box">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 11px;
+                        font-weight: 700;
+                        color: #64748b;
+                        letter-spacing: 0.06em;
+                        text-transform: uppercase;
+                      "
+                    >
+                      Real-time Analytics
+                    </div>
+                    <div style="display: flex; gap: 3px">
+                      <div
+                        style="
+                          width: 6px;
+                          height: 6px;
+                          border-radius: 50%;
+                          background: #10b981;
+                        "
+                      ></div>
+                      <span
+                        style="font-size: 9px; font-weight: 700; color: #10b981"
+                        >LIVE</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 8px;
+                    "
+                  >
+                    <div
+                      style="
+                        padding: 10px;
+                        background: #f0fdfa;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      <div
+                        style="
+                          font-size: 20px;
+                          font-weight: 800;
+                          color: #0f172a;
+                          font-family: &quot;Sora&quot;, sans-serif;
+                        "
+                      >
+                        1.2K
+                      </div>
+                      <div
+                        style="
+                          font-size: 9px;
+                          color: #10b981;
+                          font-weight: 700;
+                          margin-top: 2px;
+                        "
+                      >
+                        ↑ 18% vs last wk
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        padding: 10px;
+                        background: #f0fdfa;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      <div
+                        style="
+                          font-size: 20px;
+                          font-weight: 800;
+                          color: #0f172a;
+                          font-family: &quot;Sora&quot;, sans-serif;
+                        "
+                      >
+                        84%
+                      </div>
+                      <div
+                        style="
+                          font-size: 9px;
+                          color: #10b981;
+                          font-weight: 700;
+                          margin-top: 2px;
+                        "
+                      >
+                        ↑ 6% accuracy
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      height: 6px;
+                      border-radius: 3px;
+                      background: #e2e8f0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 76%;
+                        height: 100%;
+                        background: linear-gradient(90deg, #10b981, #06b6d4);
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-top: 4px;
+                      font-size: 9px;
+                      color: #94a3b8;
+                      font-weight: 600;
+                    "
+                  >
+                    <span>Target</span><span>76% reached</span>
+                  </div>
+                </div> -->
+
+                <img
+                  src="https://img.freepik.com/premium-vector/aibacked-automated-bookkeeping-abstract-concept-vector-illustration_107173-75074.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="feature-number">06</div>
+              <h3 class="feature-title">Real-time Analytics</h3>
+              <p class="feature-desc">
+                Monitor performance across every channel with live dashboards
+                that update automatically as data comes in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== HOW IT WORKS =================== -->
+    <section id="how" class="section-pad">
+      <div class="container-xl-custom">
+        <div class="text-center" data-aos="fade-up">
+          <div class="label-tag" style="display: inline-flex">
+            <span class="dot"></span> How It Works
+          </div>
+          <h2 class="section-headline">
+            From lead to close in four simple steps
+          </h2>
+          <p class="section-sub mx-auto text-center">
+            Quick CRM simplifies the entire customer journey so your team can
+            focus on what really matters — building relationships.
+          </p>
+        </div>
+
+        <div class="how-steps">
+          <div class="how-step" data-aos="fade-up" data-aos-delay="0">
+            <div class="how-step-visual">
+              <!-- <span>🎯</span> -->
+              <img
+                src="https://img.freepik.com/free-vector/internet-era-business-companies-used-online-channels-expand-business-customer-base-many-forms_1150-52726.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                alt=""
+              />
+              <div class="how-step-num">1</div>
+            </div>
+            <h4>Capture Leads</h4>
+            <p>
+              Automatically collect leads from web forms, emails, social media,
+              and integrations. Zero manual entry.
+            </p>
+          </div>
+
+          <div class="how-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="how-step-visual">
+              <!-- <span>🤖</span> -->
+              <img
+                src="https://img.freepik.com/free-vector/chatbot-online-customer-service-flat-concept-with-man-chatting-with-bot-vector-illustration_98292-9039.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                alt=""
+              />
+              <div class="how-step-num">2</div>
+            </div>
+            <h4>AI Organizes Customers</h4>
+            <p>
+              Our AI segments, scores, and categorizes every contact based on
+              data signals and behavioral patterns.
+            </p>
+          </div>
+
+          <div class="how-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="how-step-visual">
+              <!-- <span>⚡</span> -->
+              <img
+                src="https://img.freepik.com/premium-vector/virtual-assistant-concept-with-people-scene-flat-design-man-calling-support-chat_198565-2913.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                alt=""
+              />
+              <div class="how-step-num">3</div>
+            </div>
+            <h4>Automate Follow-ups</h4>
+            <p>
+              Trigger personalized emails, tasks, and reminders at the perfect
+              moment in every customer's journey.
+            </p>
+          </div>
+
+          <div class="how-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="how-step-visual">
+              <!-- <span>🏆</span> -->
+              <img
+                src="https://img.freepik.com/free-vector/illustration-landing-page-with-time-management-concept_23-2148241780.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_hybrid&w=740&q=80"
+                alt=""
+              />
+              <div class="how-step-num">4</div>
+            </div>
+            <h4>Close Deals Faster</h4>
+            <p>
+              With AI insights guiding every step, your team closes more deals
+              in less time — consistently.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== DASHBOARD PREVIEW =================== -->
+    <section id="preview" class="section-pad">
+      <div class="container-xl-custom">
+        <div class="row align-items-center gy-5">
+          <!-- Left: Device -->
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="preview-device">
+              <div class="preview-device-topbar">
+                <div class="topbar-dot red"></div>
+                <div class="topbar-dot yellow"></div>
+                <div class="topbar-dot green"></div>
+              </div>
+              <div class="preview-inner">
+                <div class="preview-mock">
+                  <div class="preview-sidebar">
+                    <div class="preview-sidebar-header">
+                      <div class="preview-sidebar-logo"></div>
+                      <div class="preview-sidebar-name"></div>
+                    </div>
+                    <div class="preview-nav-item active">
+                      <div class="preview-nav-icon"></div>
+                      <div class="preview-nav-text"></div>
+                    </div>
+                    <div class="preview-nav-item">
+                      <div class="preview-nav-icon"></div>
+                      <div class="preview-nav-text" style="width: 60%"></div>
+                    </div>
+                    <div class="preview-nav-item">
+                      <div class="preview-nav-icon"></div>
+                      <div class="preview-nav-text" style="width: 75%"></div>
+                    </div>
+                    <div class="preview-nav-item">
+                      <div class="preview-nav-icon"></div>
+                      <div class="preview-nav-text" style="width: 50%"></div>
+                    </div>
+                    <div class="preview-nav-item">
+                      <div class="preview-nav-icon"></div>
+                      <div class="preview-nav-text" style="width: 80%"></div>
+                    </div>
+                  </div>
+
+                  <div class="preview-content">
+                    <div class="preview-top">
+                      <div class="preview-title-block">
+                        <div class="preview-title-line"></div>
+                        <div class="preview-sub-line"></div>
+                      </div>
+                      <div class="preview-btn-mock"></div>
+                    </div>
+
+                    <div class="preview-stats">
+                      <div class="preview-stat">
+                        <div class="preview-stat-val">2,841</div>
+                        <div class="preview-stat-lbl"></div>
+                        <div class="preview-stat-trend">
+                          <i class="bi bi-arrow-up"></i> 12.4%
+                        </div>
+                      </div>
+                      <div class="preview-stat">
+                        <div class="preview-stat-val">₹92K</div>
+                        <div class="preview-stat-lbl"></div>
+                        <div class="preview-stat-trend">
+                          <i class="bi bi-arrow-up"></i> 8.1%
+                        </div>
+                      </div>
+                      <div class="preview-stat">
+                        <div class="preview-stat-val">68%</div>
+                        <div class="preview-stat-lbl"></div>
+                        <div class="preview-stat-trend">
+                          <i class="bi bi-arrow-up"></i> 3.5%
+                        </div>
+                      </div>
+                      <div class="preview-stat">
+                        <div class="preview-stat-val">142</div>
+                        <div class="preview-stat-lbl"></div>
+                        <div class="preview-stat-trend">
+                          <i class="bi bi-arrow-up"></i> 21.0%
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="preview-chart-row">
+                      <div class="preview-chart-box">
+                        <div class="preview-chart-title"></div>
+                        <div class="preview-bars">
+                          <div class="preview-bar" style="height: 60%"></div>
+                          <div class="preview-bar" style="height: 80%"></div>
+                          <div class="preview-bar" style="height: 50%"></div>
+                          <div class="preview-bar" style="height: 90%"></div>
+                          <div class="preview-bar" style="height: 70%"></div>
+                          <div class="preview-bar" style="height: 55%"></div>
+                          <div class="preview-bar" style="height: 85%"></div>
+                        </div>
+                      </div>
+
+                      <div class="preview-table-box">
+                        <div
+                          style="
+                            height: 6px;
+                            width: 80px;
+                            border-radius: 3px;
+                            background: #e2e8f0;
+                            margin-bottom: 14px;
+                          "
+                        ></div>
+                        <div class="preview-table-row">
+                          <div class="ptavatar"></div>
+                          <div class="pt-lines">
+                            <div class="pt-line w70"></div>
+                            <div class="pt-line w50"></div>
+                          </div>
+                          <div class="pt-badge"></div>
+                        </div>
+                        <div class="preview-table-row">
+                          <div class="ptavatar t"></div>
+                          <div class="pt-lines">
+                            <div class="pt-line w70"></div>
+                            <div class="pt-line w50"></div>
+                          </div>
+                          <div
+                            class="pt-badge"
+                            style="background: #dbeafe"
+                          ></div>
+                        </div>
+                        <div class="preview-table-row">
+                          <div class="ptavatar a"></div>
+                          <div class="pt-lines">
+                            <div class="pt-line w70"></div>
+                            <div class="pt-line w50"></div>
+                          </div>
+                          <div
+                            class="pt-badge"
+                            style="background: #fff7ed"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: bullets -->
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="label-tag">
+              <span class="dot"></span> Dashboard Preview
+            </div>
+            <h2
+              class="section-headline"
+              style="font-size: clamp(1.7rem, 3vw, 2.4rem)"
+            >
+              Everything you need in a single view
+            </h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--text-light);
+                margin-bottom: 36px;
+                line-height: 1.7;
+              "
+            >
+              Your entire CRM — contacts, pipeline, tasks, and analytics —
+              unified in a clean, intelligent dashboard.
+            </p>
+
+            <div class="preview-bullets">
+              <div class="preview-bullet">
+                <div class="bullet-icon">📊</div>
+                <div class="bullet-text">
+                  <h5>Live Performance Metrics</h5>
+                  <p>
+                    Track revenue, conversion rates, and activity in real-time
+                    with auto-refreshing dashboards.
+                  </p>
+                </div>
+              </div>
+              <div class="preview-bullet">
+                <div class="bullet-icon">🔗</div>
+                <div class="bullet-text">
+                  <h5>Deep Integrations</h5>
+                  <p>
+                    Connect with Slack, Gmail, Zapier, Stripe, and 150+ tools
+                    your team already uses.
+                  </p>
+                </div>
+              </div>
+              <div class="preview-bullet">
+                <div class="bullet-icon">🛡️</div>
+                <div class="bullet-text">
+                  <h5>Enterprise-grade Security</h5>
+                  <p>
+                    SOC 2 Type II compliant with role-based access, audit logs,
+                    and end-to-end encryption.
+                  </p>
+                </div>
+              </div>
+              <div class="preview-bullet">
+                <div class="bullet-icon">📱</div>
+                <div class="bullet-text">
+                  <h5>Mobile-first Design</h5>
+                  <p>
+                    Full-featured iOS and Android apps so your team can manage
+                    deals from anywhere.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== AI AUTOMATION =================== -->
+    <section id="automation" class="section-pad">
+      <div class="container-xl-custom">
+        <div class="row align-items-center gy-5">
+          <!-- Left text -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="automation-label">🤖 AI Engine</div>
+            <h2 class="automation-headline">
+              Let AI do the heavy lifting for your sales team
+            </h2>
+            <p class="automation-desc">
+              Quick CRM's AI engine learns from your best deals and
+              automatically applies those insights to every new opportunity —
+              24/7.
+            </p>
+
+            <div class="automation-feature-list">
+              <div class="auto-feat">
+                <div class="auto-feat-icon">🎯</div>
+                <div class="auto-feat-text">
+                  <h5>Predictive Lead Scoring</h5>
+                  <p>
+                    AI ranks every lead so your team focuses on the
+                    highest-value opportunities first.
+                  </p>
+                </div>
+              </div>
+              <div class="auto-feat">
+                <div class="auto-feat-icon">✉️</div>
+                <div class="auto-feat-text">
+                  <h5>AI Email Personalization</h5>
+                  <p>
+                    Generate contextual, on-brand follow-up emails in seconds
+                    using your CRM data.
+                  </p>
+                </div>
+              </div>
+              <div class="auto-feat">
+                <div class="auto-feat-icon">🔮</div>
+                <div class="auto-feat-text">
+                  <h5>Deal Win Probability</h5>
+                  <p>
+                    Know which deals are likely to close before your reps spend
+                    time on them.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn-primary-custom" style="display: inline-flex">
+              Explore AI Features <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Right: AI visual -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="ai-visual">
+              <div class="ai-card-main">
+                <div class="ai-header">
+                  <div class="ai-avatar">🤖</div>
+                  <div>
+                    <div class="ai-name">QuickAI Engine</div>
+                    <div class="ai-sub">Analyzing pipeline · 4,200 signals</div>
+                  </div>
+                  <div class="ai-status">
+                    <div class="ai-status-dot"></div>
+                    Active
+                  </div>
+                </div>
+
+                <div class="ai-metrics">
+                  <div class="ai-metric">
+                    <div class="ai-metric-val">95%</div>
+                    <div class="ai-metric-label">Lead Score Accuracy</div>
+                    <div class="ai-metric-change">↑ 6.2% vs last month</div>
+                  </div>
+                  <div class="ai-metric">
+                    <div class="ai-metric-val">3.2×</div>
+                    <div class="ai-metric-label">Faster Deal Close Rate</div>
+                    <div class="ai-metric-change">↑ 0.4× improvement</div>
+                  </div>
+                  <div class="ai-metric">
+                    <div class="ai-metric-val">₹500k</div>
+                    <div class="ai-metric-label">Revenue Influenced</div>
+                    <div class="ai-metric-change">↑ ₹200K this quarter</div>
+                  </div>
+                  <div class="ai-metric">
+                    <div class="ai-metric-val">142</div>
+                    <div class="ai-metric-label">Tasks Automated Today</div>
+                    <div class="ai-metric-change">↑ 31 more than yesterday</div>
+                  </div>
+                </div>
+
+                <div class="ai-action-list">
+                  <div class="ai-action">
+                    <div class="ai-action-icon blue">🎯</div>
+                    <div class="ai-action-text">
+                      Lead scored: Acme Corp — 94/100 (high priority)
+                    </div>
+                    <div class="ai-action-time">2m ago</div>
+                  </div>
+                  <div class="ai-action">
+                    <div class="ai-action-icon cyan">✉️</div>
+                    <div class="ai-action-text">
+                      Follow-up email sent to 12 prospects automatically
+                    </div>
+                    <div class="ai-action-time">5m ago</div>
+                  </div>
+                  <div class="ai-action">
+                    <div class="ai-action-icon green">🔮</div>
+                    <div class="ai-action-text">
+                      Deal "GlobalTech Q4" predicted to close — 87% confidence
+                    </div>
+                    <div class="ai-action-time">9m ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== PRICING =================== -->
+    <section
+      id="pricing"
+      class="section-pad"
+      style="background: var(--bg-soft)"
+    >
+      <div class="container-xl-custom">
+        <div class="text-center" data-aos="fade-up">
+          <div class="label-tag" style="display: inline-flex">
+            <span class="dot"></span> Pricing
+          </div>
+          <h2 class="section-headline">Simple, transparent pricing</h2>
+          <p class="section-sub mx-auto">
+            No hidden fees. No long-term contracts. Start free and scale when
+            you're ready.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="pricing-tier">Starter</div>
+            <div class="pricing-price">
+              <span class="price-currency">₹</span>
+              <span class="price-amount">1999</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="pricing-desc">
+              Perfect for individuals and early-stage startups getting started
+              with CRM.
+            </p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Up to 250
+                contacts
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Basic
+                pipeline management
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Email
+                integration
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> 5
+                automation rules
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Community
+                support
+              </li>
+            </ul>
+            <button class="pricing-btn pricing-btn-outline">
+              Get Started Free
+            </button>
+          </div>
+
+          <!-- Professional -->
+          <div
+            class="pricing-card featured"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="pricing-badge">⭐ Most Popular</div>
+            <div class="pricing-tier">Professional</div>
+            <div class="pricing-price">
+              <span class="price-currency">₹</span>
+              <span class="price-amount">6449</span>
+              <span class="price-period">/user/mo</span>
+            </div>
+            <p class="pricing-desc">
+              For growing sales teams that need AI-powered automation and deeper
+              insights.
+            </p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Unlimited
+                contacts
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> AI lead
+                scoring
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Advanced
+                automation
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Custom
+                dashboards
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Priority
+                support
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> 100+
+                integrations
+              </li>
+            </ul>
+            <button class="pricing-btn pricing-btn-primary">
+              Start 30 Days Free Trial
+            </button>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">
+              <span
+                class="price-amount"
+                style="font-size: 36px; line-height: 1.1; padding-top: 8px"
+                >Custom</span
+              >
+            </div>
+            <p class="pricing-desc">
+              For large organizations with complex needs, dedicated support, and
+              custom workflows.
+            </p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span>
+                Everything in Pro
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Dedicated
+                AI model
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Custom
+                integrations
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> SLA +
+                uptime guarantee
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> Dedicated
+                success manager
+              </li>
+              <li>
+                <span class="check"><i class="bi bi-check"></i></span> SSO &
+                advanced security
+              </li>
+            </ul>
+            <button class="pricing-btn pricing-btn-outline">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BECOME A PARTNER =================== -->
+    <section id="partner-section">
+      <div class="container-xl-custom">
+        <div class="row align-items-center gy-5">
+          <!-- Left column: text -->
+          <div class="col-lg-6 aos-init aos-animate ps-content">
+            <div class="ps-tag">
+              <span class="ps-tag-dot"></span>
+              Partnership Program
+            </div>
+
+            <h2 class="ps-headline">
+              Grow your business<br />
+              as a <span class="ps-gradient-text">Quick CRM Partner</span>
+            </h2>
+
+            <p class="ps-desc">
+              Join our global partner network and unlock new revenue streams.
+              Whether you're an agency, consultant, or tech platform — we'll
+              build something great together.
+            </p>
+
+            <!-- 3 benefit pills -->
+            <ul class="ps-benefits">
+              <li class="ps-benefit">
+                <span class="ps-benefit-icon">💰</span>
+                <span
+                  >Up to <strong>30% recurring commission</strong> on every
+                  referral</span
+                >
+              </li>
+              <li class="ps-benefit">
+                <span class="ps-benefit-icon">🎓</span>
+                <span>Dedicated onboarding &amp; co-marketing support</span>
+              </li>
+              <li class="ps-benefit">
+                <span class="ps-benefit-icon">🚀</span>
+                <span>Early access to new features &amp; product roadmap</span>
+              </li>
+            </ul>
+
+            <!-- CTA -->
+            <div class="ps-cta-row">
+              <a href="/partners" class="ps-btn-primary">
+                Become a Partner
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <!-- <a href="/partners#learn-more" class="ps-btn-ghost">Learn more</a> -->
+            </div>
+
+            <p class="ps-note">
+              Already a partner?
+              <a href="/partner-login">Sign in to your dashboard →</a>
+            </p>
+          </div>
+
+
+          
+          <!-- Right column: visual card -->
+          <div class="col-lg-6 aos-init aos-animate ps-visual">
+            <!-- Partner tiers card -->
+
+            <img
+              src="https://img.freepik.com/free-photo/future-visions-business-technology-concept_23-2151893421.jpg?uid=R203773899&ga=GA1.1.1935637084.1765782622&semt=ais_rp_progressive&w=740&q=80"
+              alt=""
+            />
+
+            <!-- <div class="ps-card">
+          <div class="ps-card-header">
+            <span class="ps-card-title">Partner Tiers</span>
+            <span class="ps-card-sub">3 levels · Unlimited earning</span>
+          </div>
+
+          <div class="ps-tiers">
+            <div class="ps-tier">
+              <div class="ps-tier-left">
+                <div class="ps-tier-badge ps-tier-badge--silver">Silver</div>
+                <span class="ps-tier-req">0–5 clients</span>
+              </div>
+              <div class="ps-tier-right">
+                <span class="ps-tier-pct">15%</span>
+                <div class="ps-tier-bar">
+                  <div
+                    class="ps-tier-fill"
+                    style="width: 30%; background: #94a3b8"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ps-tier ps-tier--active">
+              <div class="ps-tier-left">
+                <div class="ps-tier-badge ps-tier-badge--gold">Gold</div>
+                <span class="ps-tier-req">6–20 clients</span>
+              </div>
+              <div class="ps-tier-right">
+                <span class="ps-tier-pct" style="color: #f59e0b">22%</span>
+                <div class="ps-tier-bar">
+                  <div
+                    class="ps-tier-fill"
+                    style="
+                      width: 62%;
+                      background: linear-gradient(90deg, #f59e0b, #f97316);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ps-tier">
+              <div class="ps-tier-left">
+                <div class="ps-tier-badge ps-tier-badge--platinum">
+                  Platinum
+                </div>
+                <span class="ps-tier-req">21+ clients</span>
+              </div>
+              <div class="ps-tier-right">
+                <span class="ps-tier-pct" style="color: #4f6ef7">30%</span>
+                <div class="ps-tier-bar">
+                  <div
+                    class="ps-tier-fill"
+                    style="
+                      width: 100%;
+                      background: linear-gradient(90deg, #4f6ef7, #085c9c);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ps-card-footer">
+            <div class="ps-stat">
+              <span class="ps-stat-num"
+                >840<span style="color: #4f6ef7">+</span></span
+              >
+              <span class="ps-stat-lbl">Active Partners</span>
+            </div>
+            <div class="ps-stat-divider"></div>
+            <div class="ps-stat">
+              <span class="ps-stat-num"
+                >₹1.2<span style="color: #4f6ef7">M</span></span
+              >
+              <span class="ps-stat-lbl">Paid Out in 2025</span>
+            </div>
+            <div class="ps-stat-divider"></div>
+            <div class="ps-stat">
+              <span class="ps-stat-num"
+                >62<span style="color: #4f6ef7">+</span></span
+              >
+              <span class="ps-stat-lbl">Countries</span>
+            </div>
+          </div>
+        </div> -->
+
+            <!-- Floating badge -->
+            <div class="ps-float-badge">
+              <span class="ps-float-icon">⭐</span>
+              <div>
+                <span class="ps-float-title">Top partner this month</span>
+                <span class="ps-float-sub">₹18,400 earned · 47 referrals</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+    <!-- =================== END PARTNER SECTION =================== -->
+
+    <!-- =================== TESTIMONIALS =================== -->
+    <!-- <section id="testimonials" class="section-pad">
+      <div class="container-xl-custom">
+        <div class="testimonials-header" data-aos="fade-up">
+          <div class="label-tag" style="display: inline-flex">
+            <span class="dot"></span> Testimonials
+          </div>
+          <h2 class="section-headline">Loved by sales teams worldwide</h2>
+          <p class="section-sub mx-auto">
+            Don't take our word for it. Here's what our customers say about
+            Quick CRM.
+          </p>
+        </div>
+
+        <div
+          class="swiper swiper-testimonials"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Quick CRM has made it incredibly easy for our team to track
+                  leads and manage customer communication. The automation
+                  features save us hours every week."
+                </p>
+                <div class="testimonial-author">
+                  <div class="t-avatar">R</div>
+                  <div>
+                    <div class="t-name">Roshan Sharma</div>
+                    <div class="t-company">
+                      Sales Manager, NexaTech Solutions
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "We were struggling to manage our growing customer database,
+                  but Quick CRM brought everything into one place. The dashboard
+                  insights are extremely helpful."
+                </p>
+                <div class="testimonial-author">
+                  <div class="t-avatar">P</div>
+                  <div>
+                    <div class="t-name">Priya Mehta</div>
+                    <div class="t-company">Founder, GrowthHive Marketing</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "The AI-powered lead management in Quick CRM has helped our
+                  sales team focus on the right prospects. Our response time and
+                  conversions have improved significantly."
+                </p>
+                <div class="testimonial-author">
+                  <div class="t-avatar">A</div>
+                  <div>
+                    <div class="t-name">Amit Verma</div>
+                    <div class="t-company">
+                      Director, Vertex Business Systems
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Quick CRM is simple, fast, and powerful. Our entire team
+                  adopted it within days, and now managing sales pipelines is
+                  much more organized."
+                </p>
+                <div class="testimonial-author">
+                  <div class="t-avatar">N</div>
+                  <div>
+                    <div class="t-name">Neha Kapoor</div>
+                    <div class="t-company">
+                      Operations Head, BrightEdge Consulting
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "We evaluated multiple CRM tools, but Quick CRM stood out for
+                  its clean interface and intelligent automation features. It
+                  has made our workflow much smoother."
+                </p>
+                <div class="testimonial-author">
+                  <div class="t-avatar">V</div>
+                  <div>
+                    <div class="t-name">Vikram Desai</div>
+                    <div class="t-company">CEO, Apex Digital Solutions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-testimonials"></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- =================== CTA BANNER =================== -->
+    <section id="cta-banner">
+      <div class="container-xl-custom">
+        <div class="cta-inner" data-aos="zoom-in" data-aos-duration="600">
+          <p class="cta-eyebrow">Ready to get started?</p>
+          <h2 class="cta-headline">Close more deals with less effort</h2>
+          <p class="cta-sub">
+            Join 4,200+ teams using Quick CRM to automate their pipeline and
+            grow revenue with AI.
+          </p>
+          <div class="cta-buttons">
+            <button class="cta-btn-primary">
+              Start 30 Days Free Trial 
+            </button>
+            <button class="cta-btn-ghost">Book a Live Demo</button>
+          </div>
+          <p class="cta-guarantee">
+            ✓ Free 30-days trial &nbsp;·&nbsp; ✓ No setup fees &nbsp;·&nbsp; ✓
+            Cancel anytime
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer id="footer">
+      <div class="container-xl-custom">
+        <div class="footer-top">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="#" class="nav-logo" style="color: #fff">
+              <!-- <div class="nav-logo-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    fill="white"
+                    fill-opacity="0.9"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-opacity="0.7"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div> -->
+              <!-- Quick<span style="color: var(--primary-light)">CRM</span> -->
+              <img src="images/logo2.png" width="80px" alt="" />
+            </a>
+            <p>
+              AI-powered CRM for modern sales teams. Automate your pipeline,
+              close more deals, grow faster.
+            </p>
+            <div class="footer-social">
+              <!-- <a href="#" class="social-icon"
+                ><i class="bi bi-twitter-x"></i
+              ></a> -->
+              <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Product -->
+          <div class="footer-col">
+            <h6>Product</h6>
+            <ul class="footer-links">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">Roadmap</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-col">
+            <h6>Company</h6>
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-col">
+            <h6>Support</h6>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">API Reference</a></li>
+              <li><a href="#">Status</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 Quick CRM. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =================== SCRIPTS =================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
